@@ -1,55 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ashrith Portfolio</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#0f172a;
+color:white;
+}
+
+header{
+text-align:center;
+padding:60px;
+background:#020617;
+}
+
+section{
+padding:40px;
+text-align:center;
+}
+
+.skills span{
+background:#1e293b;
+padding:10px 20px;
+margin:5px;
+display:inline-block;
+border-radius:8px;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
+
+.card a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+}
+
+</style>
+</head>
+
 <body>
 
 <header>
+
 <h1>Ashrith</h1>
-<p>AI | Data Science Developer</p>
+<p>AI | Data Science | Python Developer</p>
+
 </header>
 
 <section>
+
 <h2>About Me</h2>
-<p>B.Tech Data Science student building AI and Machine Learning projects.</p>
-</section>
 
-<section>
-<h2>Skills</h2>
 <p>
-Python | Machine Learning | OpenCV | SQL | Data Analysis | Deep Learning
+B.Tech Data Science student building AI and Machine Learning projects.
+Interested in Computer Vision, AI tools and real-world ML systems.
 </p>
+
 </section>
 
 <section>
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<span>Python</span>
+<span>Machine Learning</span>
+<span>OpenCV</span>
+<span>Deep Learning</span>
+<span>SQL</span>
+<span>Data Analysis</span>
+
+</div>
+
+</section>
+
+<section>
+
 <h2>Projects</h2>
 
-<div>
+<div class="projects">
+
+<div class="card">
 <h3>Fatigue Detection System</h3>
 <p>Real-time fatigue detection using computer vision.</p>
 <a href="https://github.com/Ashrith59/Fatigue-detection-system">View Project</a>
 </div>
 
-<div>
+<div class="card">
 <h3>Fraud Detection System</h3>
 <p>Machine learning model detecting fraudulent transactions.</p>
 <a href="https://github.com/Ashrith59/Fraud-detection-system">View Project</a>
 </div>
 
-<div>
+<div class="card">
 <h3>AI Code Review Assistant</h3>
-<p>AI assistant that reviews code.</p>
+<p>AI assistant that reviews code and suggests improvements.</p>
 <a href="https://github.com/Ashrith59/AI-Code-Review-Assistant">View Project</a>
 </div>
 
-<div>
+<div class="card">
 <h3>Care AI Health Risk Prediction</h3>
-<p>Predicts health risk using AI.</p>
+<p>AI model predicting health risk using medical data.</p>
 <a href="https://github.com/Ashrith59/care-ai-health-risk-predication">View Project</a>
+</div>
+
 </div>
 
 </section>
 
-<section>
-<h2>Contact</h2>
-<p>Email: yourmail@gmail.com</p>
+<footer>
+
 <p>GitHub: github.com/Ashrith59</p>
-</section>
+
+</footer>
 
 </body>
+</html>
