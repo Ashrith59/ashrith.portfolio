@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ashrith | Portfolio</title>
+<title>Ashrith Portfolio</title>
 
 <style>
 
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial;
-background:#0f172a;
-color:white;
 }
 
+body{
+background:#0f172a;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* Hero Section */
+
 header{
-padding:120px 20px;
+height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -22,34 +30,56 @@ text-align:center;
 }
 
 h1{
-font-size:60px;
-margin-bottom:10px;
+font-size:70px;
+animation:fadeIn 2s ease;
 }
 
-.subtitle{
-font-size:20px;
+.typing{
+font-size:22px;
 color:#38bdf8;
+margin-top:10px;
+}
+
+.social{
+margin-top:20px;
 }
 
 .social a{
 margin:10px;
-font-size:18px;
-color:white;
 text-decoration:none;
+color:white;
+font-size:18px;
+transition:0.3s;
 }
 
+.social a:hover{
+color:#38bdf8;
+}
+
+/* Sections */
+
 section{
-padding:60px;
+padding:80px 20px;
 text-align:center;
 }
 
+/* Skills */
+
 .skills span{
 background:#1e293b;
-padding:10px 15px;
+padding:10px 20px;
 margin:5px;
 display:inline-block;
 border-radius:8px;
+transition:0.3s;
 }
+
+.skills span:hover{
+background:#38bdf8;
+color:black;
+}
+
+/* Projects */
 
 .projects{
 display:grid;
@@ -62,11 +92,12 @@ padding:20px;
 background:#1e293b;
 padding:20px;
 border-radius:10px;
-transition:0.3s;
+transition:0.4s;
 }
 
 .card:hover{
-transform:scale(1.05);
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 0 20px #38bdf8;
 }
 
 .card a{
@@ -74,13 +105,23 @@ color:#38bdf8;
 text-decoration:none;
 }
 
+/* Footer */
+
 footer{
 text-align:center;
-padding:30px;
+padding:40px;
 background:#020617;
 }
 
+/* Animation */
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(-30px);}
+to{opacity:1; transform:translateY(0);}
+}
+
 </style>
+
 </head>
 
 <body>
@@ -88,7 +129,10 @@ background:#020617;
 <header>
 
 <h1>Ashrith</h1>
-<p class="subtitle">AI | Data Science </p>
+
+<p class="typing">
+<span id="text"></span>
+</p>
 
 <div class="social">
 
@@ -105,14 +149,9 @@ background:#020617;
 <h2>About Me</h2>
 
 <p>
-Hello! I'm Ashrith, a B.Tech student specializing in Data Science with a strong interest in Artificial Intelligence and Machine Learning. 
-I enjoy building intelligent systems that solve real-world problems using data and computer vision.
-
-I have developed projects such as a Fatigue Detection System, Fraud Detection System, AI Code Review Assistant, 
-and a Health Risk Prediction model.
-
-My technical skills include Python, Machine Learning, Deep Learning, OpenCV, and Data Analysis. 
-I am passionate about creating AI-driven applications and continuously improving my technical expertise.
+Hello! I'm Ashrith, a B.Tech Data Science student passionate about Artificial Intelligence,
+Machine Learning and Computer Vision. I enjoy building intelligent systems that solve real-world
+problems through data and automation.
 </p>
 
 </section>
@@ -154,13 +193,13 @@ I am passionate about creating AI-driven applications and continuously improving
 
 <div class="card">
 <h3>AI Code Review Assistant</h3>
-<p>AI assistant that reviews code and suggests improvements.</p>
+<p>AI assistant that reviews code.</p>
 <a href="https://github.com/Ashrith59/AI-Code-Review-Assistant">View Project</a>
 </div>
 
 <div class="card">
 <h3>Health Risk Prediction</h3>
-<p>AI model predicting health risk using medical data.</p>
+<p>AI model predicting health risk.</p>
 <a href="https://github.com/Ashrith59/care-ai-health-risk-predication">View Project</a>
 </div>
 
@@ -168,9 +207,46 @@ I am passionate about creating AI-driven applications and continuously improving
 
 </section>
 
+<footer>
 
+<p>© 2026 Ashrith</p>
 
 </footer>
+
+<script>
+
+/* Typing Animation */
+
+const text = ["AI Developer","Data Science Enthusiast","Python Programmer"];
+
+let count=0;
+let index=0;
+let currentText="";
+let letter="";
+
+(function type(){
+
+if(count===text.length){
+count=0;
+}
+
+currentText=text[count];
+letter=currentText.slice(0,++index);
+
+document.getElementById("text").textContent=letter;
+
+if(letter.length===currentText.length){
+count++;
+index=0;
+setTimeout(type,1000);
+}
+else{
+setTimeout(type,100);
+}
+
+})();
+
+</script>
 
 </body>
 </html>
