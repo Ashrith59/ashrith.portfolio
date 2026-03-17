@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>My Portfolio</title>
+<title>Ashrith | Portfolio</title>
 
 <style>
 
@@ -23,29 +22,25 @@ text-align:center;
 }
 
 h1{
-font-size:50px;
+font-size:60px;
+margin-bottom:10px;
+}
+
+.subtitle{
+font-size:20px;
+color:#38bdf8;
+}
+
+.social a{
+margin:10px;
+font-size:18px;
+color:white;
+text-decoration:none;
 }
 
 section{
 padding:60px;
 text-align:center;
-}
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
-}
-
-.card a{
-color:#38bdf8;
-text-decoration:none;
 }
 
 .skills span{
@@ -56,8 +51,36 @@ display:inline-block;
 border-radius:8px;
 }
 
-</style>
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
+}
 
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+}
+
+</style>
 </head>
 
 <body>
@@ -65,8 +88,15 @@ border-radius:8px;
 <header>
 
 <h1>Ashrith</h1>
+<p class="subtitle">AI | Data Science | Python Developer</p>
 
-<p>AI Developer | Data Science | Python</p>
+<div class="social">
+
+<a href="https://github.com/Ashrith59">GitHub</a>
+
+<a href="https://www.linkedin.com/">LinkedIn</a>
+
+</div>
 
 </header>
 
@@ -78,11 +108,11 @@ border-radius:8px;
 Hello! I'm Ashrith, a B.Tech student specializing in Data Science with a strong interest in Artificial Intelligence and Machine Learning. 
 I enjoy building intelligent systems that solve real-world problems using data and computer vision.
 
-I have developed projects such as a Fatigue Detection System using computer vision, a Fraud Detection System using machine learning, 
-an AI Code Review Assistant, and a Health Risk Prediction system.
+I have developed projects such as a Fatigue Detection System, Fraud Detection System, AI Code Review Assistant, 
+and a Health Risk Prediction model.
 
 My technical skills include Python, Machine Learning, Deep Learning, OpenCV, and Data Analysis. 
-I enjoy exploring new technologies and continuously improving my problem-solving and programming skills.
+I am passionate about creating AI-driven applications and continuously improving my technical expertise.
 </p>
 
 </section>
@@ -98,6 +128,7 @@ I enjoy exploring new technologies and continuously improving my problem-solving
 <span>Deep Learning</span>
 <span>OpenCV</span>
 <span>SQL</span>
+<span>Data Analysis</span>
 
 </div>
 
@@ -111,48 +142,37 @@ I enjoy exploring new technologies and continuously improving my problem-solving
 
 <div class="card">
 <h3>Fatigue Detection System</h3>
-<a href="https://github.com/Ashrith59/Fatigue-detection-system">GitHub</a>
+<p>Real-time fatigue detection using computer vision.</p>
+<a href="https://github.com/Ashrith59/Fatigue-detection-system">View Project</a>
 </div>
 
 <div class="card">
 <h3>Fraud Detection System</h3>
-<a href="https://github.com/Ashrith59/Fraud-detection-system">GitHub</a>
+<p>Machine learning model detecting fraudulent transactions.</p>
+<a href="https://github.com/Ashrith59/Fraud-detection-system">View Project</a>
 </div>
 
 <div class="card">
 <h3>AI Code Review Assistant</h3>
-<a href="https://github.com/Ashrith59/AI-Code-Review-Assistant">GitHub</a>
+<p>AI assistant that reviews code and suggests improvements.</p>
+<a href="https://github.com/Ashrith59/AI-Code-Review-Assistant">View Project</a>
 </div>
 
 <div class="card">
 <h3>Health Risk Prediction</h3>
-<a href="https://github.com/Ashrith59/care-ai-health-risk-predication">GitHub</a>
+<p>AI model predicting health risk using medical data.</p>
+<a href="https://github.com/Ashrith59/care-ai-health-risk-predication">View Project</a>
 </div>
 
 </div>
 
 </section>
 
-<section>
+<footer>
 
-<h2>Contact</h2>
+<p>Ashrith</p>
 
-<p>
-GitHub: 
-<a href="https://github.com/Ashrith59" style="color:#38bdf8;">
-github.com/Ashrith59
-</a>
-</p>
-
-<p>
-LinkedIn: 
-<a href="https://www.linkedin.com/in/varakavi-ashrith-a48b20293" style="color:#38bdf8;">
-View My LinkedIn
-</a>
-</p>
-
-
-</section>
+</footer>
 
 </body>
 </html>
